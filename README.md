@@ -13,8 +13,6 @@ For the very easiest experience, open
 [`easy_colab.ipynb` on Google Colab](https://colab.research.google.com/github/sdatkinson/neural-amp-modeler/blob/2992b47/bin/train/easy_colab.ipynb) 
 and follow the steps!
 
-For a little more visibility under the hood, you can use [colab.ipynb](https://colab.research.google.com/github/sdatkinson/neural-amp-modeler/blob/main/bin/train/colab.ipynb) instead.
-
 **Pros:**
 
 - No local installation required!
