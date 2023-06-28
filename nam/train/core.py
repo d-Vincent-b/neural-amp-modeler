@@ -656,7 +656,7 @@ def _get_configs(
                 "config": _get_wavenet_config(architecture),
             },
             "loss": {"val_loss": "esr"},
-            "checkpoint_path": "checkpoint_path"
+            "checkpoint_path": "checkpoint_path",
             "optimizer": {"lr": lr},
             "lr_scheduler": {
                 "class": "ExponentialLR",
