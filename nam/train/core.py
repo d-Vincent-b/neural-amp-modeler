@@ -610,7 +610,7 @@ def _get_configs(
     input_path: str,
     output_path: str,
     delay: int,
-    checkpoint_used: dict, #wtf is dit
+    checkpoint_path: dict, #wtf is dit
     epochs: int,
     model_type: str,
     architecture: Architecture,
@@ -656,7 +656,7 @@ def _get_configs(
                 "config": _get_wavenet_config(architecture),
             },
             "loss": {"val_loss": "esr"},
-            "checkpoint_path": "checkpoint_used"
+            "checkpoint_path": "checkpoint_path"
             "optimizer": {"lr": lr},
             "lr_scheduler": {
                 "class": "ExponentialLR",
@@ -814,7 +814,7 @@ def train(
     input_version: Optional[Version] = None,
     epochs=100,
     delay=None,
-    checkpoint_used: Optional[dict] = None,
+    checkpoint_path: Optional[dict] = None,
     model_type: str = "WaveNet",
     architecture: Union[Architecture, str] = Architecture.STANDARD,
     batch_size: int = 16,
@@ -865,7 +865,7 @@ def train(
         input_path,
         output_path,
         delay,
-        checkpoint_used,
+        checkpoint_path,
         epochs,
         model_type,
         Architecture(architecture),
