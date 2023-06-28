@@ -70,6 +70,7 @@ def _get_valid_export_directory():
 def run(
     epochs: int = 100,
     delay: Optional[int] = None,
+    checkpoint_used: Optional[dict] = None,
     model_type: str = "WaveNet",
     architecture: str = "standard",
     lr: float = 0.004,
@@ -103,6 +104,7 @@ def run(
         delay=delay,
         model_type=model_type,
         architecture=architecture,
+        checkpoint_used=checkpoint_used,
         lr=lr,
         lr_decay=lr_decay,
         seed=seed,
