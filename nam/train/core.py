@@ -656,7 +656,6 @@ def _get_configs(
                 "config": _get_wavenet_config(architecture),
             },
             "loss": {"val_loss": "esr"},
-            "checkpoint_path": "/content/drive/MyDrive/NAM/check_baby.ckpt",
             "optimizer": {"lr": lr},
             "lr_scheduler": {
                 "class": "ExponentialLR",
@@ -699,7 +698,7 @@ def _get_configs(
         },
         "val_dataloader": {},
         "trainer": {"max_epochs": epochs, **device_config},
-        "trainer_fit_kwargs": {"ckpt_path": krakaka}
+        "trainer_fit_kwargs": {"ckpt_path": checkpoint_path}
     }
     return data_config, model_config, learning_config
 
