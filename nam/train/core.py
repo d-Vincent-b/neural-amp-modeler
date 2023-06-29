@@ -699,6 +699,7 @@ def _get_configs(
         },
         "val_dataloader": {},
         "trainer": {"max_epochs": epochs, **device_config},
+        "trainer_fit_kwargs": {"ckpt_path": krakaka}
     }
     return data_config, model_config, learning_config
 
